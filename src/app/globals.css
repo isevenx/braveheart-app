@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@import "@fontsource/montserrat/400.css";
+@import "@fontsource/montserrat/500.css";
+@import "@fontsource/montserrat/600.css";
+@import "@fontsource/montserrat/700.css";
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/playfair-display/400-italic.css";
+@import "@fontsource/playfair-display/700-italic.css";
+
+/* Braveheart brand tokens — taken from braveheartpb.com plus the cream app theme. */
+@theme {
+  --color-cream: #f4efe4;
+  --color-ink: #373b4d;
+  --color-ink-deep: #2f3242;
+  --color-forest: #2e594c;
+  --color-gold: #d3b830;
+  --color-mint: #8fc7b3;
+  --color-muted: #5f6372;
+  --color-line: #d6cebd;
+  --color-line-soft: #e3dccd;
+  --color-closed: #9a9384;
+  --color-hatch: #c9c1b0;
+
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+
+  --radius-card: 4px;
+}
+
+html {
+  background: var(--color-ink);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* The app is phone-first; on wider screens it sits in a centred phone-width column. */
+.app-frame {
+  min-height: 100dvh;
+  max-width: 430px;
+  margin: 0 auto;
+  background: var(--color-cream);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+a {
+  color: inherit;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-forest);
+  outline-offset: 2px;
+}
