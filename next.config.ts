@@ -4,14 +4,6 @@ const nextConfig: NextConfig = {
   // Nearly every screen is personalised (your calendar, your bookings), so the
   // app uses the standard request-time rendering model rather than Cache Components.
   cacheComponents: false,
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
-  },
   async headers() {
     return [
       {
