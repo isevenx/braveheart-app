@@ -4,7 +4,7 @@
  * It switches off automatically once the database and Google sign-in are configured.
  */
 export const isDemo =
-  process.env.DEMO_MODE === "true" || !process.env.DATABASE_URL || !process.env.AUTH_GOOGLE_ID;
+  process.env.DEMO_MODE === "true" || !process.env.SUPABASE_DB_URL || !process.env.AUTH_GOOGLE_ID;
 
 export const hasEmailSignIn = Boolean(process.env.AUTH_RESEND_KEY && process.env.EMAIL_FROM);
 
